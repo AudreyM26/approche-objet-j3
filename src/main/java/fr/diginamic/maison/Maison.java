@@ -10,12 +10,12 @@ public class Maison {
 		tabPieces = new Piece[0];
 	}
 	
-	//ajouter une pièce dans le tableau
+	//ajouter une piÃ¨ce dans le tableau
 	public void ajouterPiece(Piece newPiece){
 	
 		if(newPiece == null || newPiece.getEtage() < 0 || newPiece.getSuperficie() <0){
-			System.out.println("Veuillez rentrer une pièce avec des données cohérentes");
-			
+			System.out.println("Veuillez rentrer une piÃ¨ce avec des donnÃ©es cohÃ©rentes");
+
 		}else{
 			Piece[] tabPiecesCopie = new Piece[tabPieces.length+1];
 			
@@ -91,5 +91,13 @@ public class Maison {
 		}
 		
 		return cpte;
+	}
+
+	public Piece[] getTabPieces() {
+		return tabPieces;
+	}
+
+	public void setTabPieces(Piece[] tabPieces) {
+		this.tabPieces = tabPieces;
 	}
 }

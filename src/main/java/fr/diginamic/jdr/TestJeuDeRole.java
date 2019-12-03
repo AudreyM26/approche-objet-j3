@@ -18,7 +18,7 @@ public class TestJeuDeRole {
 		boolean erreur;
 	
 		while(choix != 99){
-			//Bloc d'essai pour s'assurer qu'on récupère bien un entier
+			//Bloc d'essai pour s'assurer qu'on rÃ©cupÃ¨re bien un entier
 			do {
 				try {
 					
@@ -34,8 +34,8 @@ public class TestJeuDeRole {
 	                }
 	               
 	                
-			} catch (InputMismatchException e) {
-	            	System.out.println("\nCe n'est pas une valeur prise en charge, veuillez réessayer.");
+				} catch (InputMismatchException e) {
+	            	System.out.println("\nCe n'est pas une valeur prise en charge, veuillez rÃ©essayer.");
 	                erreur = true;
 	                saisiePerso.next();
 	            }
@@ -53,12 +53,12 @@ public class TestJeuDeRole {
 		
 		System.out.println("***** MENU *****");	
 		if(perso.getNom().equals("")){
-			System.out.println("1. Créer un personnage");
+			System.out.println("1. CrÃ©er un personnage");
 		}else{
 			System.out.println("1. Afficher son personnage");
 		}
 			
-		System.out.println("2. Combattre une créature");	
+		System.out.println("2. Combattre une crÃ©ature");	
 		System.out.println("3. Afficher le score");	
 		System.out.println("99. Sortir\n");
 	}
@@ -70,7 +70,7 @@ public class TestJeuDeRole {
 			case 1 :
 				//creation du personnage, saisir son nom
 				if(perso.getNom().equals("")){
-					System.out.println("Veuillez saisir un nom à votre personnage");
+					System.out.println("Veuillez saisir un nom Ã  votre personnage");
 					perso.setNom(saisiePerso.next());
 					
 				}
@@ -88,15 +88,15 @@ public class TestJeuDeRole {
 					//Combattre la creature
 					if(perso.getPointDeVie() > 0){
 				
-						//selection aleatoire de la creature à combattre	
+						//selection aleatoire de la creature Ã  combattre	
 						Creature creatureCombat = selectionCreatureRandom();
-						System.out.println("Créature à combattre:");
+						System.out.println("CrÃ©ature Ã  combattre:");
 						System.err.println(creatureCombat);
 						//Tour de jeu
 						RegleTour(creatureCombat);
 						
 					}else{
-						System.out.println("Votre personnage est décédé. Il a obtenu le score de "+perso.getScore()+" points. Veuillez créer un nouveau personnage");
+						System.out.println("Votre personnage est dÃ©cÃ©dÃ©. Il a obtenu le score de "+perso.getScore()+" points. Veuillez crÃ©er un nouveau personnage");
 						perso.setNom("");
 						perso.setForce((new Random().nextInt(6) + 12));
 						perso.setPointDeVie((new Random().nextInt(30) + 20));
@@ -146,22 +146,22 @@ public class TestJeuDeRole {
 			int forceCreature = perso.getForce()+(new Random().nextInt(9)+1);
 			int viePerdant=0;
 			
-			//si egalité aucun dégats des 2 cotés
+			//si egalitÃ© aucun dÃ©gats des 2 cotÃ©s
 			if(forcePerso == forceCreature){
-				System.out.println("Aucun dégat pour les 2 parties.\n");
+				System.out.println("Aucun dÃ©gat pour les 2 parties.\n");
 				
 			}else{
-				//si la force du perso supérieure à celle de la créature
+				//si la force du perso supÃ©rieure Ã  celle de la crÃ©ature
 				if(forcePerso > forceCreature){
 					
 					viePerdant = pCreaCombat.getPointDeVie();
 					pCreaCombat.setPointDeVie(viePerdant-(forcePerso-forceCreature));
-					System.out.println("Vous avez remporté ce tour avec une force de "+forcePerso+" contre "+forceCreature+" pour le "+pCreaCombat.getType()+"\n");
+					System.out.println("Vous avez remportÃ© ce tour avec une force de "+forcePerso+" contre "+forceCreature+" pour le "+pCreaCombat.getType()+"\n");
 					System.out.println(pCreaCombat);
 				}else{
 					viePerdant = perso.getPointDeVie();
 					perso.setPointDeVie(viePerdant-(forceCreature-forcePerso));
-					System.out.println(pCreaCombat.getType()+" a remporté ce tour avec une force de "+forceCreature+" contre "+forcePerso+" pour vous.\n");
+					System.out.println(pCreaCombat.getType()+" a remportÃ© ce tour avec une force de "+forceCreature+" contre "+forcePerso+" pour vous.\n");
 					System.out.println(perso);
 				}
 				
@@ -170,7 +170,7 @@ public class TestJeuDeRole {
 		}
 		
 		if(perso.getPointDeVie()> 0){
-			System.out.println("Félicitations, vous avez gagné ce combat.\n");
+			System.out.println("FÃ©licitations, vous avez gagnÃ© ce combat.\n");
 			
 			int scoreCalcul=0;
 			
