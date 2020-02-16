@@ -23,7 +23,7 @@ public class Cercle {
 	
 	//redefinir toString pour afficher le perimetre et surface du cercle
 	public String toString(){
-		String texte = "Cercle de rayon:"+rayon+" \nPérimètre = "+perimetre()+"\nSurface = "+surface()+"\n";
+		String texte = "Cercle de rayon:"+rayon+" \nPÃ©rimÃ¨tre = "+perimetre()+"\nSurface = "+surface()+"\n";
 		return texte;
 	}
 

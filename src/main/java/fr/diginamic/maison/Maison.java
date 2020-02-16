@@ -1,7 +1,5 @@
 package fr.diginamic.maison;
 
-import java.util.Arrays;
-
 public class Maison {
 
 	private Piece[] tabPieces;

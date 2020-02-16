@@ -19,7 +19,7 @@ public class Salarie extends Intervenant {
 	//retourne le statut
 	public String getStatut() {
 		// TODO Auto-generated method stub
-		return "Salarié";
+		return "SalariÃ©";
 	}
 
 }

@@ -26,7 +26,7 @@ public class Rectangle extends Forme {
 
 	//redefinir toString pour afficher le perimetre et surface du rectangle
 	public String toString(){
-		String texte = "Rectangle de "+longueur+" x "+largeur+"\nPérimètre = "+calculerPerimetre()+"\nSurface = "+calculerSurface()+"\n";
+		String texte = "Rectangle de "+longueur+" x "+largeur+"\nPÃ©rimÃ¨tre = "+calculerPerimetre()+"\nSurface = "+calculerSurface()+"\n";
 		return texte;
 	}
 }

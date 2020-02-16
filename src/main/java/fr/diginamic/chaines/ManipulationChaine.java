@@ -7,7 +7,7 @@ public class ManipulationChaine {
 		String chaine = "Durand;Marcel;012543;1 523.5";
 
 		char premierCaractere = chaine.charAt(0);
-		System.out.println("Premier caractère: " + premierCaractere);
+		System.out.println("Premier caractÃ¨re: " + premierCaractere);
 		
 		System.out.println("Taille de la chaine: "+chaine.length());
 		

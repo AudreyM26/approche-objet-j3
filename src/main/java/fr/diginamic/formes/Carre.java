@@ -2,17 +2,16 @@ package fr.diginamic.formes;
 
 public class Carre extends Rectangle {
 
-	private double longueurs;
-	
-	public Carre(double longueurs) {
-		super(longueurs, longueurs);
+
+	public Carre(double longueur) {
+		super(longueur, longueur);
 	
 	}
 	
 	//redefinir toString pour afficher le perimetre et surface du cercle
 	public String toString(){
 		String texte = super.toString();
-		texte = texte.replace("Rectangle", "Carré");
+		texte = texte.replace("Rectangle", "CarrÃ©");
 		return texte;
 	}
 }
